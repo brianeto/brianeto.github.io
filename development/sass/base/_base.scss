@@ -1,7 +1,31 @@
-/// Base styles
-
-body {
-    min-width: 320px;
-    background-color: red;
-    flex: 1;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15vh 0;
+    background-color: $gray_light;
+    .left-side-up {
+      background-color: yellow;
+      align-self: flex-start;
+    }
+    .center {
+      background-color: red;
+      height: 450px;
+      width: 450px;
+      border-radius: 50%;
+      transition: all .3s ease-in-out;
+    }
+    .center:hover {
+      border-radius:0;
+      cursor: pointer;
+    }
+    .right-side {
+      background-color: blue;
+      align-self: flex-end;
+      display: flex;
+      width: 125px;
+      justify-content: space-around;
+    }
 }
